@@ -1,0 +1,61 @@
+######################
+#### DEPENDENCIES ####
+######################
+
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+
+##############
+#### PAGE ####
+##############
+
+page.config.contentObjectExceptionHandler = 0
+
+page {
+    includeCSS {
+        theme = EXT:kwm2024/Resources/Public/Scss/Theme/theme.scss
+        css = https://use.fontawesome.com/releases/v6.4.2/css/all.css
+        css {
+            external = 1
+            media = all
+            excludeFromConcatenation = 1
+        }
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+        kwm2024_scripts = EXT:kwm2024/Resources/Public/JavaScript/Dist/scripts.js
+    }
+}
+
+lib.maskContentElement {
+    templateRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements
+    }
+    partialRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements
+    }
+    layoutRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements
+    }
+}
+
+lib.record = RECORDS
+lib.record {
+    tables = tt_content
+    source = 42
+}
