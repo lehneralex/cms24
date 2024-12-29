@@ -21,6 +21,7 @@
 		"b13/container": "^3.0",
 		"bk2k/bootstrap-package": "^15.0",
 		"fhooe/kwm2024": "@dev",
+		"fhooe/musikverein": "@dev",
 		"mask/mask": "^8.3",
 		"typo3/cms-backend": "^12.4.0",
 		"typo3/cms-belog": "^12.4.0",

@@ -1,0 +1,214 @@
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: kWMContactForm
+label: KWMContactForm
+prototypeName: standard
+finishers:
+  -
+    options:
+      message: 'Danke für die Anfrage!'
+      contentElementUid: ''
+    identifier: Confirmation
+  -
+    options:
+      subject: 'Danke {text-1}'
+      recipients:
+        '{email-1}': '{text-2}'
+      senderAddress: s2310456012@fhooe.at
+      senderName: 'KWM Website'
+      addHtmlPart: true
+      attachUploads: true
+      title: KWM
+    identifier: EmailToSender
+  -
+    options:
+      subject: 'Neue Nachricht'
+      recipients:
+        s2310456012@fhooe.at: ''
+      senderAddress: '{email-1}'
+      senderName: '{text-1} {text-2}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    type: Page
+    identifier: page-1
+    label: 'Persönliche Daten'
+    renderables:
+      -
+        type: GridRow
+        identifier: gridrow-1
+        label: 'Grid: Row'
+        renderables:
+          -
+            type: GridColumn
+            identifier: gridcolumn-1
+            label: Name
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  sm:
+                    numbersOfColumnsToUse: '12'
+            renderables:
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-1
+                label: Vorname
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte Vorname eingeben!'
+                    -
+                      code: 1221560718
+                      message: 'Bitte Vorname eingeben!'
+                    -
+                      code: 1347992400
+                      message: 'Bitte Vorname eingeben!'
+                    -
+                      code: 1347992453
+                      message: 'Bitte Vorname eingeben!'
+                validators:
+                  -
+                    identifier: NotEmpty
+              -
+                defaultValue: ''
+                type: Text
+                identifier: text-2
+                label: Nachname
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte Nachname eingeben!'
+                    -
+                      code: 1221560718
+                      message: 'Bitte Nachname eingeben!'
+                    -
+                      code: 1347992400
+                      message: 'Bitte Nachname eingeben!'
+                    -
+                      code: 1347992453
+                      message: 'Bitte Nachname eingeben!'
+                validators:
+                  -
+                    identifier: NotEmpty
+          -
+            type: GridColumn
+            identifier: gridcolumn-2
+            label: ''
+            properties:
+              gridColumnClassAutoConfiguration:
+                viewPorts:
+                  sm:
+                    numbersOfColumnsToUse: '12'
+            renderables:
+              -
+                defaultValue: ''
+                type: Email
+                identifier: email-1
+                label: 'E-Mail Adresse'
+                properties:
+                  fluidAdditionalAttributes:
+                    required: required
+                  validationErrorMessages:
+                    -
+                      code: 1221560910
+                      message: 'Bitte E-Mail Adresse eingeben!'
+                    -
+                      code: 1221560718
+                      message: 'Bitte E-Mail Adresse eingeben!'
+                    -
+                      code: 1347992400
+                      message: 'Bitte E-Mail Adresse eingeben!'
+                    -
+                      code: 1347992453
+                      message: 'Bitte E-Mail Adresse eingeben!'
+                validators:
+                  -
+                    identifier: EmailAddress
+                  -
+                    identifier: NotEmpty
+              -
+                label: 'Content element'
+                properties:
+                  contentElementUid: '16'
+                type: ContentElement
+                identifier: contentelement-1
+              -
+                properties:
+                  text: ''
+                type: StaticText
+                identifier: statictext-1
+                label: 'Das Label zum Radio Button'
+              -
+                properties:
+                  options:
+                    1: Option1
+                    2: Option2
+                type: RadioButton
+                identifier: radiobutton-1
+                label: 'Mein Radio Button'
+                defaultValue: 1
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    type: Page
+    identifier: page-2
+    label: Nachricht
+    renderables:
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Nachricht
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+            minlength: '10'
+            maxlength: '1000'
+          validationErrorMessages:
+            -
+              code: 1238110957
+              message: 'Mind. 10 Zeichen eingeben!'
+            -
+              code: 1269883975
+              message: 'Mind. 10 Zeichen eingeben!'
+            -
+              code: 1428504122
+              message: 'Mind. 10 Zeichen eingeben!'
+            -
+              code: 1238108068
+              message: 'Mind. 10 Zeichen eingeben!'
+            -
+              code: 1238108069
+              message: 'Mind. 10 Zeichen eingeben!'
+        validators:
+          -
+            identifier: NotEmpty
+          -
+            options:
+              minimum: '10'
+              maximum: '1000'
+            identifier: StringLength
+  -
+    renderingOptions:
+      previousButtonLabel: Zurück
+      nextButtonLabel: Weiter
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

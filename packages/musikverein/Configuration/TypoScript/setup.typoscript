@@ -1,0 +1,53 @@
+######################
+#### DEPENDENCIES ####
+######################
+@import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
+@import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:me-google-calendar/Configuration/TypoScript/setup.typoscript'
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+
+##############
+#### PAGE ####
+##############
+page {
+    includeCSS {
+        theme = EXT:musikverein/Resources/Public/Scss/Theme/theme.scss
+        css = https://use.fontawesome.com/releases/v6.4.2/css/all.css
+        css {
+            external = 1
+            media = all
+            excludeFromConcatenation = 1
+        }
+
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+        musikverein_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/main.js
+        musikverein_news_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/news.js
+        musikverein_vorstand_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/vorstand.js
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+
+    }
+}
+
+lib.maskContentElement {
+    templateRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Templates/ContentElements/
+    }
+    partialRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+        5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
+    }
+}

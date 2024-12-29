@@ -1,0 +1,18 @@
+<f:if condition="{data.tx_mask_title}">
+    {data.tx_mask_title -> f:format.html()}
+</f:if>
+<f:for each="{data.tx_mask_file1}" as="file">
+    <a class="social-link" href="{file.link}"><f:image image="{file}" width="200" /></a>
+    {file.description}
+</f:for>
+<f:for each="{data.tx_mask_file2}" as="file">
+    <a class="social-link" href="{file.link}"><f:image image="{file}" width="200" /></a>
+    {file.description}
+    </br>
+</f:for>
+<f:if condition="{data.tx_mask_link1}">
+    <f:link.typolink parameter="{data.tx_mask_link1}"></f:link.typolink>
+</f:if>
+<f:if condition="{data.tx_mask_link2}">
+    <f:link.typolink parameter="{data.tx_mask_link2}"></f:link.typolink>
+</f:if>

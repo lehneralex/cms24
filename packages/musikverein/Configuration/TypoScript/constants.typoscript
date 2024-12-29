@@ -1,0 +1,75 @@
+######################
+#### DEPENDENCIES ####
+######################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript">
+
+
+############
+### PAGE ###
+############
+page {
+    logo {
+        file = EXT:musikverein/Resources/Public/Images/Logo MV Pabneukirchen.jpg
+        fileInverted = EXT:musikverein/Resources/Public/Images/Logo MV Pabneukirchen.jpg
+        height = 500
+        width = 1000
+        alt = Musikverein
+        linktitle = Musikverein
+    }
+    favicon {
+        file = EXT:musikverein/Resources/Public/Icons/favicon.ico
+    }
+    fluidtemplate {
+        layoutRootPath = EXT:musikverein/Resources/Private/Layouts/Page/
+        partialRootPath = EXT:musikverein/Resources/Private/Partials/Page/
+        templateRootPath = EXT:musikverein/Resources/Private/Templates/Page/
+    }
+}
+
+
+##################
+### EXTENSIONS ###
+##################
+plugin.bootstrap_package {
+    view {
+        layoutRootPath = EXT:musikverein/Resources/Private/Layouts/
+        partialRootPath = EXT:musikverein/Resources/Private/Partials/
+        templateRootPath = EXT:musikverein/Resources/Private/Templates/
+    }
+}
+
+
+########################
+### CONTENT ELEMENTS ###
+########################
+plugin.bootstrap_package_contentelements {
+    view {
+        layoutRootPath = EXT:musikverein/Resources/Private/Layouts/ContentElements/
+        partialRootPath = EXT:musikverein/Resources/Private/Partials/ContentElements/
+        templateRootPath = EXT:musikverein/Resources/Private/Templates/ContentElements/
+    }
+}
+
+
+################################
+### BOOTSTRAP SCSS CONSTANTS ###
+################################
+plugin.bootstrap_package.settings.scss {
+    primary = #eb3e4a
+    secondary = #013859
+}
+
+page.theme.footernavigation {
+    navigationType = Directory
+    navigationValue = 42
+    enable = 0
+}
+
+plugin.tx_megooglecalendar.settings.language = de
+
+#news
+plugin.tx_news.view.twb5 {
+    templateRootPath = EXT:musikverein/Resources/Private/Templates/
+    partialRootPath = EXT:musikverein/Resources/Private/Partials/
+    layoutRootPath = EXT:musikverein/Resources/Private/Layouts/
+}
