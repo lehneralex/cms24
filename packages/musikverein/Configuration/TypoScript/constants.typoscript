@@ -67,9 +67,12 @@ page.theme.footernavigation {
 
 plugin.tx_megooglecalendar.settings.language = de
 
-#news
+# news
 plugin.tx_news.view.twb5 {
     templateRootPath = EXT:musikverein/Resources/Private/Templates/
     partialRootPath = EXT:musikverein/Resources/Private/Partials/
     layoutRootPath = EXT:musikverein/Resources/Private/Layouts/
 }
+
+# image gallery
+plugin.tx_bmimagegallery.view.templateRootPath = EXT:musikverein/Resources/Private/Templates/

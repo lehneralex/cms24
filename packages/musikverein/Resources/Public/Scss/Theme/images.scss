@@ -1,0 +1,49 @@
+//// cut all images with this class except "jugend" site
+#page-content .textpic .image picture {
+  clip-path: inset(49% 0 2% 0);
+  margin-top: -57%;
+}
+
+// cut first image on "jugend" site
+#c59 .textpic .image picture {
+  clip-path: inset(26% 0 2% 0);
+  margin-top: -17%;
+}
+
+// cut second image on "jugend" site
+#c60 .textpic .image picture  {
+  clip-path: inset(16% 0 5% 0);
+  margin-top: -7%;
+}
+
+// if screen width larger 1400 then set the picture to the following dimensions
+@media (min-width: 1400px) {
+  #page-content .textpic .image picture {
+    clip-path: inset(54% 0 4% 0);
+    margin-top: -57%;
+  }
+}
+
+// space between header carousel and first content on home site
+.page-8 .frame-type-carousel_small {
+  padding-bottom: 1%;
+}
+
+// space between header carousel and first content on home site if site is
+// larger than 1400px
+@media (min-width: 1400px) {
+  #page-content .frame-type-textpic .frame-inner {
+    margin-top: -4%;
+  }
+  #p35 #page-content .frame-type-textpic .frame-inner {
+    margin-top: -7%;
+  }
+}
+
+// space between header carousel and first content on home site if site is
+// smaller than 1200px
+@media (max-width: 1200px) {
+  .page-8 .frame-type-textpic .frame-inner {
+    margin-top: 2%;
+  }
+}

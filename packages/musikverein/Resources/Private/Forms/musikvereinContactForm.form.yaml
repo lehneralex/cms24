@@ -1,0 +1,307 @@
+
+renderingOptions:
+  submitButtonLabel: Absenden
+type: Form
+identifier: musikvereinContactForm
+label: MusikvereinContactForm
+prototypeName: standard
+finishers:
+  -
+    options:
+      message: "Vielen Dank für deine Nachricht!\n\nWir haben dein Anliegen erhalten und melden uns so schnell wie möglich bei dir. Schön, dass du Kontakt mit uns aufgenommen hast - bis bald!"
+      contentElementUid: ''
+    identifier: Confirmation
+  -
+    options:
+      subject: 'Danke  {text-1} für deine Nachricht!'
+      recipients:
+        '{email-1}': '{text-2}'
+      senderAddress: s2310456012@fhooe.at
+      senderName: 'Musikverein Pabneukirchen'
+      addHtmlPart: true
+      attachUploads: true
+      title: ''
+    identifier: EmailToSender
+  -
+    options:
+      subject: 'Neue Nachricht von Website'
+      recipients:
+        s2310456012@fhooe.at: ''
+      senderAddress: '{email-1}'
+      senderName: '{text-1} {text-2}'
+      addHtmlPart: true
+      attachUploads: true
+      translation:
+        language: Default
+      title: ''
+    identifier: EmailToReceiver
+renderables:
+  -
+    renderingOptions:
+      previousButtonLabel: '< Zurück'
+      nextButtonLabel: 'Weiter >'
+    type: Page
+    identifier: page-1
+    label: 'Kontakt aufnehmen'
+    renderables:
+      -
+        properties:
+          text: "Du möchtest ein Instrument lernen und Teil unseres Musikvereins werden? Oder suchst du nach musikalischer Begleitung für deinen besonderen Anlass? Vielleicht hast du auch einfach eine allgemeine Frage oder ein Anliegen? Dann bist du hier genau richtig! Fülle einfach das Kontaktformular aus, um uns schnell und unkompliziert zu erreichen. Wir freuen uns, von dir zu hören und melden uns so schnell wie möglich bei dir. \n\n\nAlle mit * gekennzeichneten Felder sind verpflichtend auszufüllen."
+        type: StaticText
+        identifier: statictext-1
+        label: ''
+      -
+        properties:
+          options:
+            Buchungsanfrage: Buchungsanfrage
+            'Instrument lernen': 'Instrument lernen'
+            'Mitglied werden': 'Mitglied werden'
+            'Allgemeine Anfrage': 'Allgemeine Anfrage'
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Art der Anfrage auswählen'
+            -
+              code: 1221560718
+              message: 'Bitte Art der Anfrage auswählen'
+            -
+              code: 1347992400
+              message: 'Bitte Art der Anfrage auswählen'
+            -
+              code: 1347992453
+              message: 'Bitte Art der Anfrage auswählen'
+        type: SingleSelect
+        identifier: singleselect-1
+        label: 'Art der Anfrage'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Textarea
+        identifier: textarea-1
+        label: Nachricht
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Nachricht eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte Nachricht eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte Nachricht eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte Nachricht eingeben'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        properties:
+          text: ''
+        type: StaticText
+        identifier: statictext-2
+        label: 'Anmeldung zum Newsletter'
+      -
+        properties:
+          options:
+            Ja: Ja
+            Nein: Nein
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Anmeldung zum Newsletter ausfüllen'
+            -
+              code: 1221560718
+              message: 'Bitte Anmeldung zum Newsletter ausfüllen'
+            -
+              code: 1347992400
+              message: 'Bitte Anmeldung zum Newsletter ausfüllen'
+            -
+              code: 1347992453
+              message: 'Bitte Anmeldung zum Newsletter ausfüllen'
+          elementDescription: ''
+        type: RadioButton
+        identifier: radiobutton-1
+        label: 'Anmeldung zum Newsletter'
+        defaultValue: Ja
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: '< Zurück'
+      nextButtonLabel: 'Zusammenfassung >'
+    type: Page
+    identifier: page-2
+    label: 'Persönliche Daten'
+    renderables:
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-1
+        label: Vorname
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Vorname eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte Vorname eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte Vorname eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte Vorname eingeben'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-2
+        label: Nachname
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Nachname eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte Nachname eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte Nachname eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte Nachname eingeben'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Email
+        identifier: email-1
+        label: E-Mail
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte E-Mail eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte E-Mail eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte E-Mail eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte E-Mail eingeben'
+        validators:
+          -
+            identifier: EmailAddress
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Telephone
+        identifier: telephone-1
+        label: Telefonnummer
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-3
+        label: 'Straße und Hausnummer'
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Straße und Hausnummer eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte Straße und Hausnummer eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte Straße und Hausnummer eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte Straße und Hausnummer eingeben'
+        validators:
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        properties:
+          fluidAdditionalAttributes:
+            step: '1'
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte PLZ eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte PLZ eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte PLZ eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte PLZ eingeben'
+        type: Number
+        identifier: number-1
+        label: PLZ
+        validators:
+          -
+            identifier: Number
+          -
+            identifier: NotEmpty
+      -
+        defaultValue: ''
+        type: Text
+        identifier: text-4
+        label: Ort
+        properties:
+          fluidAdditionalAttributes:
+            required: required
+          validationErrorMessages:
+            -
+              code: 1221560910
+              message: 'Bitte Ort eingeben'
+            -
+              code: 1221560718
+              message: 'Bitte Ort eingeben'
+            -
+              code: 1347992400
+              message: 'Bitte Ort eingeben'
+            -
+              code: 1347992453
+              message: 'Bitte Ort eingeben'
+        validators:
+          -
+            identifier: NotEmpty
+  -
+    renderingOptions:
+      previousButtonLabel: '< Zurück'
+      nextButtonLabel: 'Absenden >'
+    type: SummaryPage
+    identifier: summarypage-1
+    label: Zusammenfassung

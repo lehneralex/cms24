@@ -1,0 +1,137 @@
+//
+// Variables
+//
+@import "variables";
+
+//
+// Import needed Bootstrap Package Files
+//
+@import "EXT:bootstrap_package/Resources/Public/Scss/bootstrap5/theme";
+@import "./header";
+@import "./footer";
+@import "./h2";
+@import "image-slider";
+@import "./image-gallery";
+@import "./images";
+@import "./contact-form";
+
+* {
+  font-family: 'Nunito', sans-serif;
+}
+
+// font size 16
+#page-content p {
+  font-size: 16px;
+}
+
+//
+.element-subheader {
+  font-size: 16px;
+  margin-bottom: 3% !important;
+}
+
+// google calender
+.fc-calendar {
+  width: 600px;
+}
+
+.fc-header-toolbar {
+  font-size: 13px;
+}
+
+.fc-center h2 {
+  font-size: 18px;
+}
+
+// news back button detail
+.news-backlink-wrap {
+  display: flex;
+  justify-content: flex-end;
+
+}
+
+.news-backlink-wrap a {
+  border: 1px solid $primary;
+  background-color: $primary;
+  color: white !important;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-right: calc(var(--bs-gutter-x)* .5);
+}
+
+// news button hover effect
+.news-backlink-wrap a:hover {
+  border: 1px solid $primary;
+  background-color: white;
+  color: $primary !important;
+}
+
+// news detailsite
+.news .header h1 {
+  font-weight: bold;
+}
+
+.news-single .frame-type-text {
+  padding-top: 2px;
+}
+
+// space between header and first image (home)
+.page-8 #page-content .frame:first-of-type {
+  padding-top: 0;
+}
+
+
+// login area
+// downloads left
+#p41 .section-row {
+  justify-content: left;
+}
+
+// image size
+#p41 .section-row .maincontent-wrap {
+  width: 17%;
+}
+
+// space between headline and image
+#c165 {
+  padding-bottom: 2%;
+}
+
+// space image
+#c164 {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+// space text
+#c163 {
+  padding-top:0;
+  padding-bottom:0;
+}
+
+// buttons font color
+.btn-primary {
+  color: white;
+}
+
+// carousel home site
+@media (min-width: 1400px) {
+  .carousel-image {
+    padding-top: 65px;
+  }
+}
+
+// dowonload icon position
+.custom-download-icon {
+  margin-top: -9px;
+}
+
+// download icon
+// space between icon and text
+.filelink-item {
+  gap: 0.5rem;
+  // space between text
+  margin-top: 0.5rem !important;
+}
+

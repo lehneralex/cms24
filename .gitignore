@@ -1,3 +1,6 @@
 public
 vendor
 .idea
+packages/kwm2024
+StudentTemplate
+!packages/musikverein/Resources/Public

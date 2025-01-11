@@ -1,0 +1,101 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+
+    <f:if condition="{files}">
+        <ul class="filelink-list">
+            <f:for each="{files}" as="file" iteration="fileIterator">
+                <f:variable name="fileTitle">
+                    <f:if condition="{file.properties.title}">
+                        <f:then>
+                            {file.properties.title} ({f:format.case(value: file.properties.extension, mode: 'lower')})
+                        </f:then>
+                        <f:else>
+                            {file.properties.name}
+                        </f:else>
+                    </f:if>
+                </f:variable>
+
+                <f:variable name="fileTitle">{fileTitle -> f:format.trim()}</f:variable>
+                <li class="filelink-item">
+                    <f:if condition="{data.uploads_type} == 1">
+                        <div class="filelink-media">
+                            <span class="filelink-fileicon" aria-hidden="true">
+                                <f:if condition="{data.layout} == 13">
+                                    <f:then>
+                                    <svg class="custom-download-icon" fill="currentColor" xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 32 32"><path d="M13.5 1h5c.3 0 .6.1.9.4.2.2.4.5.4.9v11.3h4.8c.3 0
+                                    .5.1.6.3.1.2 0 .4-.2.7l-8.2 10c-.2.3-.5.4-.8.4-.3 0-.6-.1-.8-.4L7
+                                    14.5c-.2-.3-.3-.5-.2-.7s.3-.3.6-.3h4.8V2.3c0-.4.1-.6.4-.9.3-.3.6-.4.9-.4zm14.4
+                                    20h1.2c.2 0 .3.1.4.2.1.1.2.3.2.4v8.7c0
+                                    .2-.1.3-.2.4s-.2.3-.4.3H2.9c-.2 0-.3-.1-.4-.2-.1-.1-.2-.3-.2-.4v-8.7c0-.2.1-.3.2-.4.1-.2.2-.3.4-.3h1.2c.2
+                                    0 .3.1.4.2s.2.3.2.4V26h22.5v-4.4c0-.2.1-.3.2-.4s.3-.2.5-.2z"/></svg>
+                                    </f:then>
+                                     <f:else>
+                                         <f:switch expression="{f:format.case(value: file.properties.extension, mode: 'lower')}">
+                                            <f:case value="mp3"><span class="bootstrappackageicon bootstrappackageicon-file-audio"></span></f:case>
+                                            <f:case value="avi"><span class="bootstrappackageicon bootstrappackageicon-file-video"></span></f:case>
+                                            <f:case value="mov"><span class="bootstrappackageicon bootstrappackageicon-file-video"></span></f:case>
+                                            <f:case value="mpg"><span class="bootstrappackageicon bootstrappackageicon-file-video"></span></f:case>
+                                            <f:case value="mpeg"><span class="bootstrappackageicon bootstrappackageicon-file-video"></span></f:case>
+                                            <f:case value="mkv"><span class="bootstrappackageicon bootstrappackageicon-file-video"></span></f:case>
+                                            <f:case value="jpg"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="gif"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="png"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="bmp"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="ai"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="eps"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="ico"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="tga"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="tif"><span class="bootstrappackageicon bootstrappackageicon-file-image"></span></f:case>
+                                            <f:case value="youtube"><span class="bootstrappackageicon bootstrappackageicon-youtube"></span></f:case>
+                                            <f:defaultCase><span class="bootstrappackageicon bootstrappackageicon-file"></span></f:defaultCase>
+                                         </f:switch>
+                                     </f:else>
+                                </f:if>
+
+
+
+                            </span>
+                        </div>
+                    </f:if>
+                    <f:if condition="{data.uploads_type} == 2">
+                        <f:if condition="{file -> bk2k:file.isImage()} || {file -> bk2k:file.isMedia()}">
+                            <f:if condition="{f:uri.image(src: 'file:{f:if(condition: file.originalFile, then: \'file:{file.originalFile.uid}\', else: \'file:{file.uid}\')}')} != '/'">
+                                <div class="filelink-media">
+                                    <a href="{file.publicUrl}" title="{fileTitle}"{f:if(condition: data.target, then: ' target="{data.target}"')}>
+                                        <f:media
+                                            file="{file}"
+                                            title="{fileTitle}"
+                                            width="{settings.uploads.preview.width}"
+                                            height="{settings.uploads.preview.height}"
+                                            alt="{file.properties.alternative}"
+                                        />
+                                    </a>
+                                </div>
+                            </f:if>
+                        </f:if>
+                    </f:if>
+                    <div class="filelink-body">
+                        <div class="filelink-heading">
+                            <span class="filelink-filename">
+                                <a href="{file.publicUrl}" title="{fileTitle}"{f:if(condition: data.target, then: ' target="{data.target}"')}>
+                                    {fileTitle}
+                                </a>
+                            </span>
+                            <f:if condition="{data.filelink_size}">
+                                <span class="filelink-filesize"><f:format.bytes value="{file.properties.size}" /></span>
+                            </f:if>
+                        </div>
+                        <f:if condition="{data.uploads_description}">
+                            <f:if condition="{file.properties.description}">
+                                <p class="filelink-filedescription">{file.properties.description}</p>
+                            </f:if>
+                        </f:if>
+                    </div>
+                </li>
+            </f:for>
+        </ul>
+    </f:if>
+
+</f:section>
+</html>

@@ -1,0 +1,71 @@
+#page-footer {
+  border-top: 5px solid $primary;
+}
+
+.footer-section-meta {
+  display: none;
+}
+
+.footer-section-content {
+  background-color: white;
+  height: 50%;
+}
+
+.footer-section .textpic-item {
+  color: black;
+  font-size: 11px;
+}
+
+.footer-section .textpic-text {
+  min-width: 135px;
+  align-self: baseline;
+}
+
+.footer-section .textpic-text .frame-header {
+  margin-bottom: 5px;
+}
+
+.footer-section .element-header {
+  font-size: 13px;
+  padding-top: 10px;
+}
+
+.footer-section .image {
+  height: auto;
+  width: 80%;
+}
+
+.footer-section .textpic {
+  gap: 10px;
+}
+
+.footer-section .textpic-item:has(.image) {
+  width: 30%;
+}
+
+.footer-section-content-column-right img {
+  width: 5%;
+  height: auto;
+}
+
+.footer-section-content-column-right strong {
+  font-size: 13px;
+}
+
+.footer-section-content-column-right a {
+  font-size: 13px;
+}
+
+.footer-section-content-column-right p {
+  margin-top: 26px;
+  margin-bottom: 0;
+}
+
+.footer-section .frame {
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.social-link {
+  width: 5%;
+}

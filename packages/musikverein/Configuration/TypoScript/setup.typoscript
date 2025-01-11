@@ -4,11 +4,17 @@
 @import 'EXT:news/Configuration/TypoScript/Styles/Twb5/setup.typoscript'
 @import 'EXT:mask/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:me-google-calendar/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:bm-image-gallery/Configuration/TypoScript/setup.typoscript'
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bm-image-gallery/Configuration/TypoScript/setup.typoscript">
 
+plugin.tx_bmimagegallery.view.templateRootPaths.debug = 1
 ##############
 #### PAGE ####
 ##############
+
+page.config.contentObjectExceptionHandler = 0
+
 page {
     includeCSS {
         theme = EXT:musikverein/Resources/Public/Scss/Theme/theme.scss
@@ -29,6 +35,7 @@ page {
         musikverein_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/main.js
         musikverein_news_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/news.js
         musikverein_vorstand_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/vorstand.js
+        musikverein_galerie_scripts = EXT:musikverein/Resources/Public/JavaScript/Src/gallery.js
     }
 
     includeJSFooterlibs {
@@ -51,3 +58,8 @@ lib.maskContentElement {
         5 = EXT:bootstrap_package/Resources/Private/Layouts/ContentElements/
     }
 }
+
+plugin.tx_form.settings.yamlConfiguration.100 = EXT:musikverein/Configuration/Form/Setup.yaml
+module.tx_form.settings.yamlConfiguration.100 = EXT:musikverein/Configuration/Form/Setup.yaml
+
+

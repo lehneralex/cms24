@@ -1,0 +1,110 @@
+.all-images-slider {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 35px;
+}
+
+.vorstand-overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 200px;
+  height: 267px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.slider-image-overlay {
+  position: relative;
+  display: inline-block;
+}
+
+.vorstand-image {
+  display: block;
+}
+
+.vorstand-picture-description {
+  color: black;
+  opacity: 100%;
+  background: none;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+.hidden {
+  display: none;
+}
+
+.slider {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  padding-top: 0;
+}
+
+.scroll-button {
+  border-radius: 4px;
+  background-color: #5a5a5a;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 35px;
+}
+
+.scroll-button:not(:disabled):hover {
+  background-color: $primary;
+}
+
+.slider-container {
+  overflow: hidden;
+}
+
+.scroll-button.right {
+  margin-left: 15px;
+}
+
+.scroll-button.left {
+  margin-right: 15px;
+}
+
+.news-item-media {
+  max-width: unset;
+  width: 20vw;
+}
+
+
+.news-overlay {
+  color: white;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.news-picture-description {
+  background-color: $primary;
+  padding: 10px 20px 10px 20px;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.hover-news-button {
+  border: 1px solid $primary;
+  background-color: white;
+  color: $primary;
+}
+
+// space between headline "Vorstand" and image slider
+#c55 {
+  padding-bottom: 1%;
+}
