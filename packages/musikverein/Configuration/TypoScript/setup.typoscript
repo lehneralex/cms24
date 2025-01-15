@@ -6,9 +6,7 @@
 @import 'EXT:me-google-calendar/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:bm-image-gallery/Configuration/TypoScript/setup.typoscript'
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bm-image-gallery/Configuration/TypoScript/setup.typoscript">
 
-plugin.tx_bmimagegallery.view.templateRootPaths.debug = 1
 ##############
 #### PAGE ####
 ##############

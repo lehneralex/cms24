@@ -59,12 +59,6 @@ plugin.bootstrap_package.settings.scss {
     secondary = #013859
 }
 
-page.theme.footernavigation {
-    navigationType = Directory
-    navigationValue = 42
-    enable = 0
-}
-
 plugin.tx_megooglecalendar.settings.language = de
 
 # news
@@ -74,5 +68,4 @@ plugin.tx_news.view.twb5 {
     layoutRootPath = EXT:musikverein/Resources/Private/Layouts/
 }
 
-# image gallery
-plugin.tx_bmimagegallery.view.templateRootPath = EXT:musikverein/Resources/Private/Templates/
+

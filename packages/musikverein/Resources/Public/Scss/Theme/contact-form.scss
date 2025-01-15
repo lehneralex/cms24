@@ -1,44 +1,52 @@
+// Kontaktformular
+
+// Zusammenfassung Überschrift formatieren
 fieldset legend {
   font-size: 1.75rem;
   font-weight: bold;
   margin-bottom: 2%;
 }
 
+// Zusammenfassung Rahmen
 .summary-list {
   border: 2px solid $primary;
   margin-bottom: 2%;
 }
 
+// Zusammenfassung bei erstem Element Abstand nach oben
 .summary-list .row:first-child {
   margin-top: 1%;
 }
 
-.summary-list .row {
-  margin-left: -1%;
-  flex-wrap: nowrap;
-}
-
+// Spaltengröße
 .summary-list .col {
   max-width: 30%;
 }
 
+// Buttons rechts und links
 .form-navigation {
   display: flex;
   justify-content: space-between;
 }
 
+// nach zweitem Element Abstand nach unten
 .summary-list .row:nth-child(2) {
   margin-bottom: 2.5%;
 }
 
+// nach drittem Element Abstand nach untne
 .summary-list .row:nth-child(3) {
   margin-bottom: 2.5%;
 }
 
+// Formatierung jeder Reihe (damit Text in Zeile bleibt)
 .summary-list .row {
   margin-bottom: 0;
+  margin-left: -1%;
+  flex-wrap: nowrap;
 }
 
+// Danke Seite - Abstand nach oben verringert
 #c181 {
   padding-top: 0;
 }

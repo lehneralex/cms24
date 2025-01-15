@@ -1,32 +1,37 @@
-// Image gallery: allow 2 images per row instead of 1 for a screen width from 991px until 768px
+// Image gallery: erlaube 2 Bilder pro Reihe statt einem bei einer Bildschirmbreite von 991px bis 768px
+// Wenn größer als 768px dann ...
 @media (min-width: 768px) {
   .col-md-6 {
     width: 49%;
   }
 }
 
-// Image gallery: allow 4 images per row instead of 3 for a screen width until 992px
+// Image gallery: erlaube 4 Bilder pro Reihe anstatt von drei bei einer Bildschirmbreite ab 992px
 @media (min-width: 992px) {
   .col-lg-3 {
     width: 24%;
   }
 }
 
-// don't show amount of albums
+// Anzahl der Alben verbergen
 .c-gallery__count {
   display: none;
 }
 
-// button in detail view
+// "Zurück" Button in Detailansicht
 .row figure {
   padding-right: 0;
 }
 
+// Übercontainer, in dem Üverlay und Bild sind
 .gallery-image-overlay {
+  // alle Kind-Elemente werden relativ zu gallery-image-overlay positioniert
   position: relative;
+  // alles in einer Zeile darstellen (overlay und bild übereinander)
   display: inline-block;
 }
 
+// Overlay (sieht man nicht), hat Größe des Bildes
 .gallery-overlay {
   color: white;
   width: 100%;
@@ -40,11 +45,18 @@
   pointer-events: none;
 }
 
+// Bild in Galerie transparenter machen
 .custom-gallery-image {
   margin-bottom: 0;
   opacity: 47%;
 }
 
+// Abstand zwischen Alben und header
 #c170 {
   padding-top: 2%;
+}
+
+// Text im Button auf Bild
+.gallery-picture-description {
+  font-size: 16px !important;
 }

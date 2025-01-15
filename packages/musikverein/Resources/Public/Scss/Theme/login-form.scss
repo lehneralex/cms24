@@ -1,0 +1,9 @@
+// Überschrift bei Login Formular
+.frame-type-felogin_login .frame-inner h3 {
+  font-weight: bold;
+}
+
+// Wenn man eingeloggt ist, wird ganz unten bei Ausloggen die Überschrift nicht angezeigt
+.frame-type-felogin_login legend {
+  display: none;
+}

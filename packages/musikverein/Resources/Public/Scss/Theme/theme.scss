@@ -14,42 +14,53 @@
 @import "./image-gallery";
 @import "./images";
 @import "./contact-form";
+@import "./login-form";
 
 * {
   font-family: 'Nunito', sans-serif;
 }
 
-// font size 16
+// Schriftgröße auf 16
 #page-content p {
   font-size: 16px;
 }
 
-//
+// alle Unter-Überschriften
 .element-subheader {
   font-size: 16px;
   margin-bottom: 3% !important;
 }
 
-// google calender
+
+
+// Kalender
+
+// Google Calender
 .fc-calendar {
   width: 600px;
 }
 
+// Google calender toolbar ("Überschriften" des Kalender)
 .fc-header-toolbar {
   font-size: 13px;
 }
 
+// Monatsbezeichnung des Kalenders
 .fc-center h2 {
   font-size: 18px;
 }
 
-// news back button detail
+
+
+// News
+
+// News "zurück" Button in Detailansicht
 .news-backlink-wrap {
   display: flex;
   justify-content: flex-end;
-
 }
 
+// "Zurück" Button in Detailansicht
 .news-backlink-wrap a {
   border: 1px solid $primary;
   background-color: $primary;
@@ -57,78 +68,74 @@
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   border-radius: 4px;
+  // Button zurück auf Detailview so weit eingerückt wie Frame-Elemente
   margin-right: calc(var(--bs-gutter-x)* .5);
 }
 
-// news button hover effect
+// News Button Hover-effect
 .news-backlink-wrap a:hover {
   border: 1px solid $primary;
   background-color: white;
   color: $primary !important;
 }
 
-// news detailsite
+// News Detailsite
 .news .header h1 {
   font-weight: bold;
 }
 
+// Abstand zwischen Überschrift und Text in Detailansicht
 .news-single .frame-type-text {
   padding-top: 2px;
 }
 
-// space between header and first image (home)
+// Abstand zwischen Header und erstem Bild auf Home
 .page-8 #page-content .frame:first-of-type {
   padding-top: 0;
 }
 
 
-// login area
-// downloads left
+
+// Login Bereich
+
+// Downloads links
 #p41 .section-row {
   justify-content: left;
 }
 
-// image size
+// Bildergröße
 #p41 .section-row .maincontent-wrap {
   width: 17%;
 }
 
-// space between headline and image
+// Abstand zwischen Überschrift und Bild (Events)
 #c165 {
   padding-bottom: 2%;
 }
 
-// space image
+// Abstand Bild
 #c164 {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-// space text
+// Abstand text
 #c163 {
   padding-top:0;
   padding-bottom:0;
 }
 
-// buttons font color
+// Buttons Schriftfarbe
 .btn-primary {
   color: white;
 }
 
-// carousel home site
-@media (min-width: 1400px) {
-  .carousel-image {
-    padding-top: 65px;
-  }
-}
-
-// dowonload icon position
+// Position Download-Icon
 .custom-download-icon {
   margin-top: -9px;
 }
 
-// download icon
-// space between icon and text
+// Abstand zwishcen Download-Icon und Text
 .filelink-item {
   gap: 0.5rem;
   // space between text

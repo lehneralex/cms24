@@ -12,13 +12,19 @@
 	<f:if condition="{news}">
 		<f:then>
 			<div class="news-list-view" id="news-container-{contentObjectData.uid}">
+                <!--  Wenn Template ausgewählt ist, wird customized Design dargestellt, ansonsten Standarddarstellung-->
                 <f:if condition="{settings.templateLayout}=1">
                         <f:then>
+                            <!-- slider mit buttons um nach links und rechts navigieren zu können -->
                             <div class="slider">
+                                <!--  Button um nach links zu scrollen, standardmäßig auf "nicht klickbar"                              -->
                                 <button class="scroll-button left" id="news-left-button" disabled><</button>
+                                <!-- Übercontainer von Container mit allen Bildern - hat fixe Größe -->
                                 <div class="slider-container">
+                                    <!-- Container mit allen Bildern -->
                                     <div class="all-images-slider">
                                         <f:for each="{news}" as="newsItem" iteration="iterator">
+                                            <!-- div mit Image und Overlay - damit Overlay richtig platziert werden kann-->
                                             <div class="slider-image-overlay">
                                                 <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
                                                     <f:if condition="{newsItem.mediaPreviews}">
@@ -33,6 +39,7 @@
                                                     </f:if>
                                                 </n:link>
 
+                                                <!-- div auf Bild - damit Button positioniert werden kann-->
                                                 <div class="news-overlay">
                                                     <p class="news-picture-description">
                                                         {newsItem.title}
@@ -44,6 +51,7 @@
                                         </f:for>
                                     </div>
                                 </div>
+                                <!-- Button um nach rechts zu scrollen -->
                                 <button class="scroll-button right" id="news-right-button">></button>
                             </div>
                         </f:then>

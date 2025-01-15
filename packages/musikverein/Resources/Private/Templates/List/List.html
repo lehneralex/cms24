@@ -58,13 +58,17 @@
 <f:section name="externalPage">
     <f:link.action arguments="{show : item.identifier}" action="detail" class="c-gallery__list-link"
                        pluginName="GalleryDetail" pageUid="{settings.galleryPage}" title="{item.title}">
+        <!-- Hinzufügen eines Overlay für ein Bild in der Galerie -->
         <div class="gallery-image-overlay">
             <f:image image="{item.preview}" class="c-gallery__image figure-img img-fluid custom-gallery-image"
                      width="{settings.images.width}" alt="{item.description}"
                      height="{settings.images.height}" maxWidth="{settings.images.maxWidth}"
                      maxHeight="{settings.images.maxHeight}"/>
+            <!-- Overlay direkt auf Bild hinzufügen -->
             <div class="gallery-overlay">
-                <p class="news-picture-description">
+                <!--  p für Klassen hinzugefügt um Button daraus zu machen (Style mit CSS definiert)-->
+                <p class="news-picture-description gallery-picture-description">
+                    <!--  zeigt "Titel" von einer Galerie in der Mitte an  -->
                     {item.title}
                 </p>
             </div>
@@ -76,7 +80,7 @@
     <figcaption class="c-gallery__figure-caption figure-caption" id="bmimagegallery-caption-{item.identifier}">
         <f:link.action arguments="{show : item.identifier}" action="detail" class="c-gallery__list-link"
                        pluginName="GalleryDetail" pageUid="{settings.galleryPage}" title="{item.title}">
-<!--                            {item.title}-->
+            <!-- Originalen Titel nicht anzeigen   {item.title}-->
         </f:link.action>
     </figcaption>
 

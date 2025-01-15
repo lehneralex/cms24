@@ -1,49 +1,79 @@
-//// cut all images with this class except "jugend" site
+// schneide alle Bilder mit dieser Klasse außer auf "Jugend" Seite
 #page-content .textpic .image picture {
+  // schneide Bild zu (oben, rechts, unten, links)
   clip-path: inset(49% 0 2% 0);
   margin-top: -57%;
 }
 
-// cut first image on "jugend" site
-#c59 .textpic .image picture {
-  clip-path: inset(26% 0 2% 0);
-  margin-top: -17%;
-}
 
-// cut second image on "jugend" site
-#c60 .textpic .image picture  {
-  clip-path: inset(16% 0 5% 0);
-  margin-top: -7%;
-}
+// Jugend-Seite
 
-// if screen width larger 1400 then set the picture to the following dimensions
-@media (min-width: 1400px) {
-  #page-content .textpic .image picture {
-    clip-path: inset(54% 0 4% 0);
-    margin-top: -57%;
+  // schneide erstes Bild auf "Jugend"-Seite zu
+  #c59, #c216 {
+    .textpic .image picture {
+      clip-path: inset(26% 0 2% 0);
+      margin-top: -17%;
   }
 }
 
-// space between header carousel and first content on home site
-.page-8 .frame-type-carousel_small {
-  padding-bottom: 1%;
-}
+  // schneide zweites Bild auf "Jugend"-Seite zu
+  #c60, #c217 {
+    .textpic .image picture {
+      clip-path: inset(16% 0 5% 0);
+      margin-top: -7%;
+    }
+  }
 
-// space between header carousel and first content on home site if site is
-// larger than 1400px
-@media (min-width: 1400px) {
-  #page-content .frame-type-textpic .frame-inner {
-    margin-top: -4%;
+  // wenn Bildschirm größer als 1400px ist, dann setze Bild auf folgende Größe
+  @media (min-width: 1400px) {
+    #page-content .textpic .image picture {
+      clip-path: inset(54% 0 4% 0);
+      margin-top: -57%;
+    }
   }
-  #p35 #page-content .frame-type-textpic .frame-inner {
-    margin-top: -7%;
-  }
-}
 
-// space between header carousel and first content on home site if site is
-// smaller than 1200px
-@media (max-width: 1200px) {
-  .page-8 .frame-type-textpic .frame-inner {
-    margin-top: 2%;
+  // Größe des ersten "Jugend" Bildes wenn Seite größer als 1400px ist
+  @media (min-width: 1400px) {
+    #c59, #c216 {
+      .textpic .image picture {
+        clip-path: inset(26% 0 2% 0);
+        margin-top: -11%;
+      }
+    }
+    // Größe des zweiten "Jugend" Bildes wenn Seite größer als 1400px ist
+    #c60, #c217 {
+      .textpic .image picture {
+        clip-path: inset(16% 0 5% 0);
+        margin-top: -3%;
+      }
+    }
   }
-}
+
+
+
+// Home-Seite
+
+  // Abstand zwischen Header Carousel und erstem Content auf Home-Seite
+  .page-8 .frame-type-carousel_small {
+    padding-bottom: 1%;
+  }
+
+  // Abstand zwischen Header Carousel und erstem Content auf Home-Seite
+ // wenn Seite größer als 1400px ist
+  @media (min-width: 1400px) {
+    #page-content .frame-type-textpic .frame-inner {
+      margin-top: -4%;
+    }
+    #p35 #page-content .frame-type-textpic .frame-inner {
+      margin-top: -7%;
+    }
+  }
+
+  // Abstand zwischen Header Carousel und erstem Content auf Home-Seite wenn Seite
+  // kleiner als 1200px ist
+  @media (max-width: 1200px) {
+    .page-8 .frame-type-textpic .frame-inner {
+      margin-top: 2%;
+    }
+  }
+

@@ -1,71 +1,90 @@
+// Footer
+
+// footer getrennt von Content mit Strich
 #page-footer {
   border-top: 5px solid $primary;
 }
 
+// originaler footer nicht sichtbar
 .footer-section-meta {
   display: none;
 }
 
+// footer content Hintergrund weiß und Höhe auf 50
 .footer-section-content {
   background-color: white;
   height: 50%;
 }
 
+// Schriftfarbe und Schriftgröße von Textbild-Elementen
 .footer-section .textpic-item {
   color: black;
   font-size: 11px;
 }
 
+// Text selbst, minimum 135px damit Wörter nicht verrutschen bei kleinerer Seite
 .footer-section .textpic-text {
   min-width: 135px;
+  // Text zentriert
   align-self: baseline;
 }
 
+// Abstand zwischen Überschrift und Text
 .footer-section .textpic-text .frame-header {
   margin-bottom: 5px;
 }
 
+// Überschrift
 .footer-section .element-header {
   font-size: 13px;
   padding-top: 10px;
 }
 
+// Logo
 .footer-section .image {
   height: auto;
   width: 80%;
 }
 
+// Abstand zwischen Logo und Schrift
 .footer-section .textpic {
   gap: 10px;
 }
 
+// Änderung der Größe von image-Teil von textpic-Element (Logo neben Text kleiner)
 .footer-section .textpic-item:has(.image) {
   width: 30%;
 }
 
+// Social Media Icons
 .footer-section-content-column-right img {
   width: 5%;
   height: auto;
 }
 
-.footer-section-content-column-right strong {
+// Schriftgröße rechts von "Folge uns" und nicht selektierter Sprache
+.footer-section-content-column-right p {
   font-size: 13px;
 }
 
+// Schriftgröße von linkem footer-Teil
 .footer-section-content-column-right a {
   font-size: 13px;
 }
 
-.footer-section-content-column-right p {
+// Abstand "Folge uns" bis zu oberem Teil von footer
+.footer-section-content-column-right p:first-child {
   margin-top: 26px;
   margin-bottom: 0;
 }
 
+// linkes footer Element - Abstand nach oben und unten
 .footer-section .frame {
   padding-top: 22px;
   padding-bottom: 22px;
 }
 
+// Link von Social Media kleiner
 .social-link {
   width: 5%;
 }

@@ -1,3 +1,4 @@
+// alle Bilder auf News und Vorstand
 .all-images-slider {
   display: flex;
   justify-content: flex-start;
@@ -5,6 +6,7 @@
   gap: 35px;
 }
 
+// Overlay vom Vorstand (hat weißen Hintergrund der leicht transparent ist)
 .vorstand-overlay {
   background-color: rgba(255, 255, 255, 0.5);
   width: 200px;
@@ -17,28 +19,36 @@
   pointer-events: none;
 }
 
+// Parent von image und overlay (Kind davon wird relativ positioniert) bei News und Vorstand
 .slider-image-overlay {
   position: relative;
+  // kind-elemente bleiben in einer zeile
   display: inline-block;
 }
 
+// ein Bild von Vorstand
 .vorstand-image {
+  // volle Breite des übergeordneten Elements und neue Zeile
   display: block;
 }
 
+// Text von Vorstand Overlay
 .vorstand-picture-description {
   color: black;
   opacity: 100%;
   background: none;
   font-weight: bold;
   text-align: center;
-
+  margin-bottom: 0;
 }
 
+// für Hover-Effekt - wenn Klasse auf Element ist, wird Element nicht angezeigt
+// nur bei Vorstand
 .hidden {
   display: none;
 }
 
+// kompletter Slider mit Button und Bilder bei News und Vorstand
 .slider {
   display: flex;
   align-items: center;
@@ -47,6 +57,7 @@
   padding-top: 0;
 }
 
+// Button zum Scrollen bei News und Vorstand
 .scroll-button {
   border-radius: 4px;
   background-color: #5a5a5a;
@@ -56,28 +67,35 @@
   height: 35px;
 }
 
+// wenn man über Button hovert und er nicht disabled ist, wird er in Primary Farbe dargestellt
+// bei News und Vorstand
 .scroll-button:not(:disabled):hover {
   background-color: $primary;
 }
 
+// Container zwischen den zwei Buttons mit Bildern bei News und Vorstand
 .slider-container {
+  // alles was über die Größe hinausragt, wird nicht angezeigt
   overflow: hidden;
 }
 
+// Abstand vom rechten Button bei News und Vorstand
 .scroll-button.right {
   margin-left: 15px;
 }
 
+// Abstand vom linken Button bei News und Vorstand
 .scroll-button.left {
   margin-right: 15px;
 }
 
+// Bild von News
 .news-item-media {
   max-width: unset;
   width: 20vw;
 }
 
-
+// News-overlay, nicht sichtbar aber so groß wie News-Bild
 .news-overlay {
   color: white;
   width: 100%;
@@ -88,23 +106,27 @@
   left: 0;
   display: flex;
   align-items: center;
+  // bei hovern reagiert dieses Element nicht
   pointer-events: none;
 }
 
+// Text auf News Button
 .news-picture-description {
   background-color: $primary;
-  padding: 10px 20px 10px 20px;
+  padding: 0.5vw 1vw 0.5vw 1vw;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 1vw !important;
+  margin-bottom: 0;
 }
 
+// Button auf News bei Hover-Effekt
 .hover-news-button {
   border: 1px solid $primary;
   background-color: white;
   color: $primary;
 }
 
-// space between headline "Vorstand" and image slider
+// Abstand zwischen Überschrift "Vorstand" und Bilder slider
 #c55 {
   padding-bottom: 1%;
 }

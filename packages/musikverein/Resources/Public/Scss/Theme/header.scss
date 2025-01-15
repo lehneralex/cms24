@@ -1,34 +1,35 @@
+// Trennstrich unter header
 #page-header {
   border-bottom: 5px solid $primary;
 }
 
+// Navigation
 #mainnavigation {
   background-color: $primary;
   margin-right: -500px;
   padding: 7px;
 }
 
+// Schriftfarbe im Menü
 #mainnavigation .nav-link-text {
   color: white;
 }
 
+// Abstand zwischen Logo und Menü Hintergrund
 .navbar-mainnavigation .nav-link.nav-link-main:before {
   background-color: white;
 }
 
-//.navbar-brand-image img {
-.navbar-brand-logo-normal {
-
-}
-
+// Logo oben links
 .navbar-mainnavigation .navbar-brand-image img {
   top: 72%;
   width: 100%;
   max-height: 234%;
 }
 
-// minimum header height
+// Minimum header Höhe
 #page-header {
   min-height: 115px;
   padding: 0;
+  overflow: hidden;
 }

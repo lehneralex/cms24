@@ -1,13 +1,17 @@
 <f:if condition="{data.tx_mask_images}">
     <div class="frame-container frame-container-default slider frame" id="vorstand-slider">
         <button id="scrollLeftButton" class="scroll-button left" disabled><</button>
+        <!--  Übercontainer mit fixer Größe      -->
         <div class="slider-container">
+            <!-- Container der Bilder enthält -->
             <div class="all-images-slider">
                <f:for each="{data.tx_mask_images}" as="data_item">
                     <f:for each="{data_item.tx_mask_img}" as="file">
+                        <!-- Container um Overlay auf Image positionieren zu können -->
                         <div class="slider-image-overlay">
                             <f:image class="vorstand-image" image="{file}" width="200" />
 
+                            <!-- Overlay selbst (liegt auf Bild) -->
                             <div class="vorstand-overlay hidden">
                                 <p class="vorstand-picture-description">
                                 {file.description}

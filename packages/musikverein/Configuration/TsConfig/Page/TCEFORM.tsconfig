@@ -7,6 +7,5 @@ TCEFORM {
     }
     tt_content {
         layout.addItems.13 = Custom File Links
-        layout.addItems.14 = Custom Gallery List
     }
 }
